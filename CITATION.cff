@@ -1,23 +1,26 @@
 cff-version: 1.2.0
-message: "Pre-release draft. Not admitted, not peer reviewed. Cite only with this status."
+message: "Please cite the specific version of this work that you use."
 type: article
 title: "Planar Steiner diversities need logarithmic L1 distortion"
 authors:
   - family-names: Kline
     given-names: Jeff
-version: 0.0.0-draft
+version: 0.1.0
+repository-code: "https://github.com/jeff-kline/planar-steiner-diversities-log-distortion"
 license: GPL-3.0-only
 keywords:
   - diversities
   - graph Steiner diversity
+  - L1 embeddings
   - diamond graphs
   - treewidth
   - flow-cut gap
 abstract: >-
-  Unit diamond graphs are planar and have treewidth two, but their graph
-  Steiner diversities require logarithmic L1 distortion. A generation-set
-  cut certificate proves the explicit lower bound (6d+7+2/4^d)/9 after d
-  replacement rounds. The same demands satisfy every cut condition but
-  require at least this much fractional Steiner-tree routing congestion.
-  A cited upper bound identifies the logarithmic order. Exact distortion
-  beyond depth two is not determined here. Novelty remains unresolved.
+  The Steiner diversities of planar graphs cannot be embedded in L1 with
+  bounded distortion. The unit diamond graph D_d is planar, has treewidth two
+  and has (2*4^d+4)/3 vertices, and its Steiner diversity needs L1 distortion
+  at least (6d+7+2/4^d)/9. With an upper bound of Bryant and Tupper the order
+  log n is correct. In flow-cut terms, D_d carries set demands that pass every
+  cut test but need at least that congestion when routed by Steiner trees.
+  The exact distortion is not determined for d >= 3, and novelty is not
+  established.

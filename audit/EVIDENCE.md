@@ -2,7 +2,7 @@
 
 Pre-release draft. Not admitted, not peer reviewed.
 
-Source: `/Users/klinellc/Documents/hm-ai/quarantine/steiner-diversity-tw-2026-10-25/`.
+Source: `~/Documents/hm-ai/quarantine/steiner-diversity-tw-2026-10-25/`.
 The source is a read-only non-Git directory, so there is no source commit.
 Its original manifest was checked first: 150 entries passed, none failed.
 The later flow-cut and citing scan logs are outside that original 150-file
@@ -55,7 +55,7 @@ For a deliberate recheck against the source directory, the named inventory
 script verifies equality before rewriting this evidence index:
 
 ```sh
-/Users/klinellc/.venvs/claude/bin/python scripts/draft_inventory.py --evidence
+~/.venvs/claude/bin/python scripts/draft_inventory.py --evidence
 ```
 
 `MANIFEST.sha256` covers every current draft file except itself and ignored

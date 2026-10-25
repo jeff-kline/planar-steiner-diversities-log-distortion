@@ -4,8 +4,8 @@ Date: 2026-10-25. Pre-release draft. Not admitted, not peer reviewed.
 
 ## Environment and bounds
 
-Every Python workload used `/Users/klinellc/.venvs/claude/bin/python`.
-Its recorded prefix is `/Users/klinellc/.venvs/claude`; the base prefix is
+Every Python workload used `~/.venvs/claude/bin/python`.
+Its recorded prefix is `~/.venvs/claude`; the base prefix is
 `/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9`.
 The prefix inequality passed. All new checker, inventory and build scripts
 use only the standard library; no optimization solver or package install
@@ -22,7 +22,7 @@ higher-depth check evaluates a rational formula only.
 Command, from the repository root:
 
 ```sh
-/Users/klinellc/.venvs/claude/bin/python scripts/run_job.py --cpu 90 --wall 120 verify-final -- /Users/klinellc/.venvs/claude/bin/python scripts/verify.py
+~/.venvs/claude/bin/python scripts/run_job.py --cpu 90 --wall 120 verify-final -- ~/.venvs/claude/bin/python scripts/verify.py
 ```
 
 Child PID 18627 exited 0. Recorded child CPU: 0.766621 seconds; runner wall:
@@ -88,7 +88,7 @@ and the exact rational objectives agree. Empty-set constraints vanish.
 Command:
 
 ```sh
-/Users/klinellc/.venvs/claude/bin/python scripts/run_job.py --cpu 120 --wall 180 paper-first -- /Users/klinellc/.venvs/claude/bin/python scripts/build_paper.py
+~/.venvs/claude/bin/python scripts/run_job.py --cpu 120 --wall 180 paper-first -- ~/.venvs/claude/bin/python scripts/build_paper.py
 ```
 
 Child PID 18314 exited 0, with 3.422175 child CPU seconds, 3.543352 wall

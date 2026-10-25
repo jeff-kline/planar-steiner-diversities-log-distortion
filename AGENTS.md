@@ -9,7 +9,7 @@ The coordinating session owns all later release decisions.
 
 Status: Pre-release draft. Not admitted, not peer reviewed.
 Read PLAN.md, BUILD.md, audit/PRIOR_WORK.md and audit/EVIDENCE.md before edits.
-Use only /Users/klinellc/.venvs/claude/bin/python for named Python scripts;
+Use only ~/.venvs/claude/bin/python for named Python scripts;
 assert sys.prefix != sys.base_prefix. Never run a system interpreter or pip.
 No package installs are required. TeX compiler: /opt/local/bin/pdflatex.
 Long jobs require a tracked PID, resource limits and logs; verify PID after kills.

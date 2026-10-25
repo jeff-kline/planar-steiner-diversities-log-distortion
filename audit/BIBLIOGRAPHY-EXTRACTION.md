@@ -6,10 +6,10 @@ novelty determination. The owner controls all paper wording and citation choices
 ## Exposure and limits
 
 The local source root below is
-`/Users/klinellc/Documents/hm-ai/quarantine/steiner-diversity-tw-2026-10-25/sources/`.
+`~/Documents/hm-ai/quarantine/steiner-diversity-tw-2026-10-25/sources/`.
 Line references refer to the saved `.txt` files there, without alteration.
 The predecessor root is
-`/Users/klinellc/Documents/hm-ai/covering-hitting-diversities/`.
+`~/Documents/hm-ai/covering-hitting-diversities/`.
 
 Read the destination's `AGENTS.md` and `PLAN.md`. At extraction time, `BUILD.md`,
 `audit/PRIOR_WORK.md`, and `audit/EVIDENCE.md` were not yet present. The owner

@@ -1,0 +1,14 @@
+{
+  "instance": "C4",
+  "n": 4,
+  "m": 4,
+  "induced_vertex_subsets": 16,
+  "MST_edge_checks_upper": 64,
+  "cut_weight_variables": 7,
+  "variables_including_D": 8,
+  "terminal_subsets": 11,
+  "inequalities": 22,
+  "dense_incidence_entries": 77,
+  "estimated_peak_MiB": 64,
+  "solver_wall_limit_seconds": 90
+}

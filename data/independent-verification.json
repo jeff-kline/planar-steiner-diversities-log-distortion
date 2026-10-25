@@ -1,0 +1,202 @@
+{
+  "rows": [
+    {
+      "name": "C10",
+      "n": 10,
+      "LP_status": 0,
+      "result": "9/5",
+      "independent_exact_check": true
+    },
+    {
+      "name": "C12",
+      "n": 12,
+      "LP_status": 0,
+      "result": "11/6",
+      "independent_exact_check": true
+    },
+    {
+      "name": "C4",
+      "n": 4,
+      "LP_status": 0,
+      "result": "3/2",
+      "independent_exact_check": true
+    },
+    {
+      "name": "C5",
+      "n": 5,
+      "LP_status": 0,
+      "result": "8/5",
+      "independent_exact_check": true
+    },
+    {
+      "name": "C6",
+      "n": 6,
+      "LP_status": 0,
+      "result": "5/3",
+      "independent_exact_check": true
+    },
+    {
+      "name": "C7",
+      "n": 7,
+      "LP_status": 0,
+      "result": "12/7",
+      "independent_exact_check": true
+    },
+    {
+      "name": "C8",
+      "n": 8,
+      "LP_status": 0,
+      "result": "7/4",
+      "independent_exact_check": true
+    },
+    {
+      "name": "K3",
+      "n": 3,
+      "LP_status": 0,
+      "result": "4/3",
+      "independent_exact_check": true
+    },
+    {
+      "name": "K4",
+      "n": 4,
+      "LP_status": 0,
+      "result": "3/2",
+      "independent_exact_check": true
+    },
+    {
+      "name": "K5",
+      "n": 5,
+      "LP_status": 0,
+      "result": "8/5",
+      "independent_exact_check": true
+    },
+    {
+      "name": "K6",
+      "n": 6,
+      "LP_status": 0,
+      "result": "5/3",
+      "independent_exact_check": true
+    },
+    {
+      "name": "K8",
+      "n": 8,
+      "LP_status": 0,
+      "result": "7/4",
+      "independent_exact_check": true
+    },
+    {
+      "name": "diamond2",
+      "n": 12,
+      "LP_status": 0,
+      "result": "17/8",
+      "independent_exact_check": true
+    },
+    {
+      "name": "fan5",
+      "n": 5,
+      "LP_status": 0,
+      "result": "8/5",
+      "independent_exact_check": true
+    },
+    {
+      "name": "fan8",
+      "n": 8,
+      "LP_status": 0,
+      "result": "7/4",
+      "independent_exact_check": true
+    },
+    {
+      "name": "grid2x3",
+      "n": 6,
+      "LP_status": 0,
+      "result": "5/3",
+      "independent_exact_check": true
+    },
+    {
+      "name": "grid2x4",
+      "n": 8,
+      "LP_status": 0,
+      "result": "7/4",
+      "independent_exact_check": true
+    },
+    {
+      "name": "grid2x5",
+      "n": 10,
+      "LP_status": 0,
+      "result": "9/5",
+      "independent_exact_check": true
+    },
+    {
+      "name": "grid2x6",
+      "n": 12,
+      "LP_status": 0,
+      "result": "11/6",
+      "independent_exact_check": true
+    },
+    {
+      "name": "grid3x3",
+      "n": 9,
+      "LP_status": 0,
+      "result": "11/6",
+      "independent_exact_check": true
+    },
+    {
+      "name": "grid3x4",
+      "n": 12,
+      "LP_status": 0,
+      "result": "29/15",
+      "independent_exact_check": true
+    },
+    {
+      "name": "path8",
+      "n": 8,
+      "LP_status": 0,
+      "result": "1",
+      "independent_exact_check": true
+    },
+    {
+      "name": "random2tree8-seed17",
+      "n": 8,
+      "LP_status": 0,
+      "result": "4/3",
+      "independent_exact_check": true
+    },
+    {
+      "name": "random2tree8-seed31",
+      "n": 8,
+      "LP_status": 0,
+      "result": "14/11",
+      "independent_exact_check": true
+    },
+    {
+      "name": "random2tree8-seed53",
+      "n": 8,
+      "LP_status": 0,
+      "result": "26/19",
+      "independent_exact_check": true
+    },
+    {
+      "name": "star8",
+      "n": 8,
+      "LP_status": 0,
+      "result": "1",
+      "independent_exact_check": true
+    },
+    {
+      "name": "wheel5",
+      "n": 5,
+      "LP_status": 0,
+      "result": "5/3",
+      "independent_exact_check": true
+    },
+    {
+      "name": "wheel8",
+      "n": 8,
+      "LP_status": 0,
+      "result": "38/21",
+      "independent_exact_check": true
+    }
+  ],
+  "cpu_seconds": 3.100607,
+  "method": "Independent Dreyfus-Wagner subset DP plus integer/Fraction primal and dual checks"
+}

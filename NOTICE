@@ -1,0 +1,16 @@
+Copyright (C) 2026 Jeff Kline.
+Original paper, TeX source, prose, and scripts are licensed under GPL-3.0-only.
+The full GNU General Public License version 3 is in LICENSE, copied unchanged
+from the covering-hitting-diversities predecessor at commit 60d135d.
+
+This is a local pre-release draft. Not admitted, not peer reviewed.
+No source commit exists for the non-Git research evidence directory.
+Selected AI-assisted research records and rational certificate data were
+copied under the author's direction, with original bytes and qualifications
+preserved. See audit/EVIDENCE.md for source paths and hashes.
+
+Bibliographic citations do not relicense cited works. Third-party manuscripts
+are not redistributed. The GNU license text retains its own permission
+notice. The draft's paper and checker are newly prepared; the build workflow
+is adapted from the author's predecessor repository. No remote, tag, archive
+or publication identifier has been assigned to this draft.

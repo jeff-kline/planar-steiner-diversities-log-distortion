@@ -1,0 +1,14 @@
+{
+  "instance": "K3",
+  "n": 3,
+  "m": 3,
+  "induced_vertex_subsets": 8,
+  "MST_edge_checks_upper": 24,
+  "cut_weight_variables": 3,
+  "variables_including_D": 4,
+  "terminal_subsets": 4,
+  "inequalities": 8,
+  "dense_incidence_entries": 12,
+  "estimated_peak_MiB": 64,
+  "solver_wall_limit_seconds": 90
+}

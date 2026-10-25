@@ -1,0 +1,14 @@
+{
+  "instance": "C10",
+  "n": 10,
+  "m": 10,
+  "induced_vertex_subsets": 1024,
+  "MST_edge_checks_upper": 10240,
+  "cut_weight_variables": 511,
+  "variables_including_D": 512,
+  "terminal_subsets": 1013,
+  "inequalities": 2026,
+  "dense_incidence_entries": 517643,
+  "estimated_peak_MiB": 64,
+  "solver_wall_limit_seconds": 90
+}

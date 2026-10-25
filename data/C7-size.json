@@ -1,0 +1,14 @@
+{
+  "instance": "C7",
+  "n": 7,
+  "m": 7,
+  "induced_vertex_subsets": 128,
+  "MST_edge_checks_upper": 896,
+  "cut_weight_variables": 63,
+  "variables_including_D": 64,
+  "terminal_subsets": 120,
+  "inequalities": 240,
+  "dense_incidence_entries": 7560,
+  "estimated_peak_MiB": 64,
+  "solver_wall_limit_seconds": 90
+}

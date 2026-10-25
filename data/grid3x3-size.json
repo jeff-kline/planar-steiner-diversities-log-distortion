@@ -1,0 +1,14 @@
+{
+  "instance": "grid3x3",
+  "n": 9,
+  "m": 12,
+  "induced_vertex_subsets": 512,
+  "MST_edge_checks_upper": 6144,
+  "cut_weight_variables": 255,
+  "variables_including_D": 256,
+  "terminal_subsets": 502,
+  "inequalities": 1004,
+  "dense_incidence_entries": 128010,
+  "estimated_peak_MiB": 64,
+  "solver_wall_limit_seconds": 90
+}

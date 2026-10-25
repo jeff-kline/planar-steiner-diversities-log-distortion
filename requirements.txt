@@ -1,0 +1,2 @@
+# Python standard library only; no third-party package dependencies.
+# Task interpreter: /Users/klinellc/.venvs/claude/bin/python (isolated).

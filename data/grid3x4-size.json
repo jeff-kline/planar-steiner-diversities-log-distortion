@@ -1,0 +1,15 @@
+{
+  "instance": "grid3x4",
+  "n": 12,
+  "m": 17,
+  "induced_vertex_subsets": 4096,
+  "MST_edge_checks_upper": 69632,
+  "cut_weight_variables": 2047,
+  "variables_including_D": 2048,
+  "terminal_subsets": 4083,
+  "inequalities": 4100,
+  "all_upper_constraints_implied_and_verified": true,
+  "dense_incidence_entries": 8357901,
+  "estimated_peak_MiB": 2391,
+  "solver_wall_limit_seconds": 90
+}

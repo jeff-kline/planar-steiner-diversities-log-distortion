@@ -1,0 +1,14 @@
+{
+  "instance": "K5",
+  "n": 5,
+  "m": 10,
+  "induced_vertex_subsets": 32,
+  "MST_edge_checks_upper": 320,
+  "cut_weight_variables": 15,
+  "variables_including_D": 16,
+  "terminal_subsets": 26,
+  "inequalities": 52,
+  "dense_incidence_entries": 390,
+  "estimated_peak_MiB": 64,
+  "solver_wall_limit_seconds": 90
+}

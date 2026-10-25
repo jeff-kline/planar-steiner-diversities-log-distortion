@@ -1,0 +1,108 @@
+{
+  "name": "C5",
+  "n": 5,
+  "edges": [
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      2,
+      1
+    ],
+    [
+      2,
+      3,
+      1
+    ],
+    [
+      3,
+      4,
+      1
+    ],
+    [
+      4,
+      0,
+      1
+    ]
+  ],
+  "status": 0,
+  "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "objective": 1.6,
+  "estimate": {
+    "instance": "C5",
+    "n": 5,
+    "m": 5,
+    "induced_vertex_subsets": 32,
+    "MST_edge_checks_upper": 160,
+    "cut_weight_variables": 15,
+    "variables_including_D": 16,
+    "terminal_subsets": 26,
+    "inequalities": 52,
+    "dense_incidence_entries": 390,
+    "estimated_peak_MiB": 64,
+    "solver_wall_limit_seconds": 90
+  },
+  "rational_candidate": "8/5",
+  "exact_certified": true,
+  "primal_verified": true,
+  "dual_verified": true,
+  "dual_objective": "8/5",
+  "dual_normalization": "1",
+  "weights": {
+    "1": "3/5",
+    "2": "3/5",
+    "6": "1/5",
+    "7": "1",
+    "8": "2/5",
+    "12": "1",
+    "14": "1/5"
+  },
+  "dual_lower": {
+    "31": "2/5"
+  },
+  "dual_upper": {
+    "3": "1/5",
+    "6": "1/5",
+    "12": "1/5",
+    "17": "1/5",
+    "24": "1/5"
+  },
+  "steiner_costs": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    2,
+    1,
+    2,
+    0,
+    2,
+    2,
+    3,
+    1,
+    3,
+    2,
+    3,
+    0,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    1,
+    2,
+    3,
+    3,
+    2,
+    3,
+    3,
+    4
+  ],
+  "cpu_seconds": 0.0032250000000000334
+}

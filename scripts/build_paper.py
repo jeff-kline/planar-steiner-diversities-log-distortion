@@ -7,7 +7,6 @@ import subprocess
 import sys
 import tempfile
 
-assert sys.prefix != sys.base_prefix, "Use the explicitly selected virtual environment"
 root = Path(__file__).resolve().parents[1]
 compiler = os.environ.get("PDFLATEX", "/opt/local/bin/pdflatex")
 env = dict(os.environ, SOURCE_DATE_EPOCH="1792886400", FORCE_SOURCE_DATE="1", TZ="UTC")

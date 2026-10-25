@@ -1,5 +1,5 @@
-PYTHON ?= $(HOME)/.venvs/claude/bin/python
-PDFLATEX ?= /opt/local/bin/pdflatex
+PYTHON ?= python3
+PDFLATEX ?= pdflatex
 .PHONY: paper verify
 paper:
 	PDFLATEX="$(PDFLATEX)" "$(PYTHON)" scripts/build_paper.py

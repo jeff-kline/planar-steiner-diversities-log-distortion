@@ -2,12 +2,11 @@
 
 Pre-release draft. Not admitted, not peer reviewed.
 
-Use `/Users/klinellc/.venvs/claude/bin/python` explicitly for every named
-Python script. It is an isolated virtual environment; scripts assert
-`sys.prefix != sys.base_prefix`. The verifier and builder use the standard
-library only. No pip, solver, system interpreter or package installation
-is needed. The existing environment's unrelated scientific packages are not
-imported. `requirements.txt` records that there are no package dependencies.
+The verifier and builder need only Python 3 and its standard library; no
+solver or package installation is needed. The author runs them in an isolated
+virtual environment (`$HOME/.venvs/claude/bin/python`). The maintainer scripts
+`run_job.py`, `check_readme.py` and `draft_inventory.py` insist on a virtual
+environment. `requirements.txt` records that there are no package dependencies.
 
 The checked compiler is `/opt/local/bin/pdflatex`, pdfTeX 1.40.22
 (TeX Live 2021/MacPorts 2021.58693_2). Required TeX packages: amsmath,
@@ -25,8 +24,8 @@ make verify PYTHON="$HOME/.venvs/claude/bin/python"
 For tracked, resource-capped jobs, give each run a fresh name:
 
 ```sh
-/Users/klinellc/.venvs/claude/bin/python scripts/run_job.py --cpu 120 --wall 180 paper-check -- /Users/klinellc/.venvs/claude/bin/python scripts/build_paper.py
-/Users/klinellc/.venvs/claude/bin/python scripts/run_job.py --cpu 90 --wall 120 exact-check -- /Users/klinellc/.venvs/claude/bin/python scripts/verify.py
+$HOME/.venvs/claude/bin/python scripts/run_job.py --cpu 120 --wall 180 paper-check -- $HOME/.venvs/claude/bin/python scripts/build_paper.py
+$HOME/.venvs/claude/bin/python scripts/run_job.py --cpu 90 --wall 120 exact-check -- $HOME/.venvs/claude/bin/python scripts/verify.py
 ```
 
 The runner records child PID, command, caps, exit status, child resource
@@ -67,7 +66,7 @@ The README rendering check uses the user-authorized GitHub Markdown API:
 
 ```sh
 gh api markdown -f text="$(cat README.md)" -f mode=gfm > build/readme.html
-/Users/klinellc/.venvs/claude/bin/python scripts/check_readme.py
+$HOME/.venvs/claude/bin/python scripts/check_readme.py
 ```
 
 The checker compares source inline and fenced math counts with the rendered

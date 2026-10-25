@@ -22,12 +22,12 @@ A diversity assigns a value to every finite set of points, extending a metric
 from pairs to sets. The Steiner diversity of a graph gives each set of
 vertices the length of the shortest connected subgraph that contains it. We
 show that the Steiner diversities of planar graphs cannot be embedded in
-$\ell_1$ with bounded distortion, even though their shortest-path metrics
-can. The examples are the unit diamond graphs $D_d$, which are planar and
-have treewidth two. The graph $D_d$ has $N_d=(2\cdot4^d+4)/3$ vertices, and
-its Steiner diversity needs $\ell_1$ distortion at least $(6d+7+2/4^d)/9$.
-By an upper bound of Bryant and Tupper, the order $\log N_d$ is correct.
-Equivalently, $D_d$ carries demands on vertex sets that pass every cut test
+$\ell_1$ with bounded distortion. The examples are the unit diamond graphs
+$D_d$, which are planar and have treewidth two, and whose shortest-path
+metrics embed in $\ell_1$ with distortion at most 2. The graph $D_d$ has
+$N_d=(2\cdot4^d+4)/3$ vertices, and its Steiner diversity needs $\ell_1$
+distortion at least $(6d+7+2/4^d)/9$. By an upper bound of Bryant and Tupper,
+the order $\log N_d$ is correct. In flow--cut terms, $D_d$ carries demands on vertex sets that pass every cut test
 but need congestion at least this large when routed by Steiner trees. The
 exact distortion is not determined for $d\ge3$. Bounded literature searches
 found no earlier statement of the result, but its novelty is not established.
@@ -69,11 +69,11 @@ over all dimensions $m$ and maps $f$ with
 $\delta(A)\le h_f(A)\le D\delta(A)$ for every $A\subseteq V$; rescaling $f$
 shows that this normalization loses nothing. For unit edge lengths we write $c_1(G)$.
 
-For pairs of vertices, the question is settled on these graph classes.
-OpenAI's problem \#089 papers prove that shortest-path metrics of planar
-graphs, and of graphs of bounded treewidth, embed in $\ell_1$ with bounded
+For pairs of vertices, recent preprints for OpenAI's problem \#089 prove
+that shortest-path metrics of planar graphs, and of graphs of bounded
+treewidth, embed in $\ell_1$ with bounded
 distortion~\cite{OAIplanar,OAItw}. For series-parallel graphs, which include
-the diamonds below, the sharp bound 2 is due to Chakrabarti, Jaffe, Lee and
+the diamonds below, the bound 2 is due to Chakrabarti, Jaffe, Lee and
 Vincent~\cite{CJLV}, as surveyed in \cite[Section 1.2]{OAIplanar}. We show
 that once all vertex sets count, no constant bound holds, already for planar
 graphs of treewidth two.
@@ -83,8 +83,8 @@ Theorem~\ref{thm:main} gives an explicit lower bound for the unit diamond
 graphs at every depth. Its proof is a short certificate: one inequality,
 valid for every cut, on $d$ nested vertex sets. Corollary~\ref{cor:order}
 shows that the bound has the correct order, $\log N_d$, and
-Corollary~\ref{cor:flow} restates it as a gap between flows and cuts for
-demands on vertex sets. Propositions~\ref{prop:length} and~\ref{prop:method}
+Corollary~\ref{cor:flow} recasts its certificate as a gap between flows and
+cuts for demands on vertex sets. Propositions~\ref{prop:length} and~\ref{prop:method}
 show how the bound depends on edge lengths and that the certificate is the
 best of its shape. None of these results determines $c_1(D_d)$ for $d\ge3$.
 The exact values in Section~\ref{sec:finite} are checks, not premises of the
@@ -94,7 +94,8 @@ proof. Section~\ref{sec:earlier} credits earlier work.
 Let $D_0$ be one edge. To obtain $D_d$ from $D_{d-1}$, replace every edge by
 two internally disjoint paths of two edges each. Every final edge has unit
 length. Retain all earlier vertices, and let $V_j$ be the vertex set present
-after generation $j$, viewed as a subset of $V_d$.
+after generation $j$, viewed as a subset of $V_d$. Figure~\ref{fig:diamond}
+shows $D_2$.
 
 \begin{theorem}\label{thm:main}
 For every integer $d\ge1$, the graph $D_d$ has $4^d$ edges and
@@ -104,7 +105,8 @@ Its graph Steiner diversity satisfies
 c_1(D_d)\ge L_d:=\frac{6d+7+2/4^d}{9}.
 \]
 Consequently, neither planar graphs nor graphs of treewidth two admit a
-uniform constant bound on $\ell_1$ diversity distortion.
+uniform constant bound on the $\ell_1$ distortion of graph Steiner
+diversities.
 \end{theorem}
 
 \subsection{Cut representation and duality}
@@ -148,8 +150,8 @@ branches. Distances double; corresponding paths concatenate in each branch,
 and the two branch collections are edge-disjoint.
 
 Every edge of $D_j$, for $j\ge1$, lies in the four-cycle replacing its
-parent edge. Hence $D_j$ is connected and bridgeless, and each nontrivial
-cut crosses at least two edges.
+parent edge, so $D_j$ is bridgeless. Since $D_j$ is also connected by
+construction, each nontrivial cut crosses at least two edges.
 
 Replacing each edge in a planar drawing inside a narrow neighborhood
 preserves planarity. For a width-two tree decomposition, start with the
@@ -259,7 +261,8 @@ The lower bound is self-contained; the upper bound uses
 \end{corollary}
 \begin{proof}
 Bryant and Tupper prove an $O(\log n)$ upper bound for the Steiner diversity
-of an $n$-point metric space. Graph Steiner costs equal the Steiner costs
+of an $n$-point metric space, using the random-tree approximation of
+Fakcharoenphol, Rao and Talwar~\cite{FRT}. Graph Steiner costs equal the Steiner costs
 in the shortest-path metric completion on the same vertex set. Replacing
 metric-tree edges by graph shortest paths gives one inequality; viewing a
 graph Steiner tree as a tree of metric edges gives the other. All vertices
@@ -294,6 +297,12 @@ gives $f4^dL_d\le4^d$. This verifies the stated normalization directly.
 Their Theorems 1--2 and 17--18 establish the general diversity/flow--cut
 correspondence; the calculation here supplies these particular demands.
 \end{proof}
+
+For demands on pairs, the contrast is sharp. The worst flow--cut gap on a
+fixed graph equals the worst $\ell_1$ distortion of its weighted
+shortest-path metrics~\cite[Section~3, Theorem~3.2]{GNRS}, as stated
+in~\cite[Section~1.1]{OAIplanar}. On series-parallel graphs such as $D_d$
+that gap is therefore at most $2$~\cite{CJLV}.
 
 \begin{proposition}[Secondary: length dependence]\label{prop:length}
 Common positive rescaling of all edge lengths preserves $c_1$. If the
@@ -408,14 +417,15 @@ flow--cut gaps~\cite{BT14}, and proved the $O(\log n)$ upper bound for
 Steiner diversities~\cite[Theorem 2]{BTopen}. We use the last result only
 for the upper half of Corollary~\ref{cor:order} and have not re-proved it.
 
-Jozefiak and Shepherd~\cite{JS} note the general lower bound of order
-$\log n$ inherited from expander metrics; it says nothing about planar
-graphs. Gupta, Newman, Rabinovich and Sinclair~\cite{GNRS} show that some
-series-parallel metrics need distortion of order $\log n$ in distributions
-over dominating trees. That is a statement about metrics and a different
-target, but it suggests a reading of Theorem~\ref{thm:main}: for Steiner
-diversities of diamonds, $\ell_1$ does no better than random trees, up to a
-constant factor.
+Bryant and Tupper~\cite{BTopen} note, and Jozefiak and Shepherd~\cite{JS}
+repeat, the general lower bound of order $\log n$ inherited from metrics that
+need that distortion; it says nothing about planar graphs. Gupta, Newman,
+Rabinovich and Sinclair~\cite{GNRS} show that some series-parallel metrics
+need distortion of order $\log n$ in distributions over dominating trees.
+That is a statement about metrics and a different target. Because the upper
+bound in Corollary~\ref{cor:order} is proved with random dominating trees,
+Theorem~\ref{thm:main} shows that for Steiner diversities of diamonds,
+$\ell_1$ does no better than random trees, up to a constant factor.
 
 The author's earlier paper~\cite{Kline} studies Steiner diversities of
 hypergraphs, whose edges may contain more than two vertices, through an
@@ -429,11 +439,12 @@ priority. The repository records each search and its limits.
 \section*{AI assistance}
 AI systems helped find the result, attack and check the proof, verify the
 finite certificates, extract bibliographic data and draft this paper, under
-the author's direction. A separate AI review checked the full proof. Such
+the author's direction. Separate AI reviews checked the source proofs and
+then the full text of this paper, including Corollary~\ref{cor:flow}. Such
 reviews are not peer review or a formal proof. The author is responsible for
 the claims and their presentation.
 
-\begin{thebibliography}{9}
+\begin{thebibliography}{10}
 \bibitem{BT12} D. Bryant and P. F. Tupper.
 Hyperconvexity and tight-span theory for diversities.
 \emph{Advances in Mathematics} 231(6):3172--3198, 2012.
@@ -450,11 +461,13 @@ Diversity Embeddings and the Hypergraph Sparsest Cut.
 \bibitem{OAIplanar} OpenAI.
 Planar Graph Metrics Embed into L1 with Constant Distortion.
 Preprint, September 23, 2026.
-\href{https://github.com/openai/math/blob/main/lean/docs/089.md}{Official problem \#089 index}.
+\href{https://github.com/openai/math/blob/main/preprints/Planar-Graph-Metrics-Embed-into-L1-with-Constant-Distortion-September-23-2026/paper.pdf}{PDF};
+\href{https://github.com/openai/math/blob/main/lean/docs/089.md}{problem \#089 index}.
 \bibitem{OAItw} OpenAI.
 L1 Embeddings of Graphs of Bounded Treewidth.
 Preprint, September 23, 2026.
-\href{https://github.com/openai/math/blob/main/lean/docs/089.md}{Official problem \#089 index}.
+\href{https://github.com/openai/math/blob/main/preprints/L1-Embeddings-of-Graphs-of-Bounded-Treewidth-September-23-2026/paper.pdf}{PDF};
+\href{https://github.com/openai/math/blob/main/lean/docs/089.md}{problem \#089 index}.
 \bibitem{CJLV} A. Chakrabarti, A. Jaffe, J. R. Lee and J. Vincent.
 Embeddings of Topological Graphs: Lossy Invariants, Linearization, and 2-Sums.
 In \emph{49th Annual IEEE Symposium on Foundations of Computer Science},
@@ -462,10 +475,15 @@ pages 761--770, 2008. Metadata and metric bound checked in \cite{OAIplanar,OAItw
 original paper not inspected.
 \bibitem{GNRS} A. Gupta, I. Newman, Y. Rabinovich and A. Sinclair.
 Cuts, Trees and $\ell_1$-Embeddings of Graphs.
-\emph{Combinatorica} 24(2):233--269, 2004. Statement as cited in \cite[Section 1]{OAItw}; full text not inspected.
+\emph{Combinatorica} 24(2):233--269, 2004. Statements as cited in
+\cite[Section 1.1]{OAIplanar} and \cite[Section 1]{OAItw}; full text not inspected.
+\bibitem{FRT} J. Fakcharoenphol, S. Rao and K. Talwar.
+A tight bound on approximating arbitrary metrics by tree metrics.
+\emph{Journal of Computer and System Sciences} 69:485--497, 2004.
+As cited in \cite{BTopen}; full text not inspected.
 \bibitem{Kline} J. Kline.
 Covering versus hitting in diversity embeddings: an affine obstruction and
 matching bounds. Version 0.1.0, September 13, 2026.
-\href{https://github.com/jeff-kline/covering-hitting-diversities}{Repository}.
+\href{https://doi.org/10.5281/zenodo.22731697}{doi:10.5281/zenodo.22731697}.
 \end{thebibliography}
 \end{document}

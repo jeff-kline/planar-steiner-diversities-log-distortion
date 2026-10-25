@@ -195,7 +195,6 @@ def check_integrity():
 
 
 def main():
-    assert sys.prefix != sys.base_prefix, "Use the explicitly selected virtual environment"
     assert not sys.flags.optimize, "Assertions must be enabled"
     parser = argparse.ArgumentParser()
     parser.add_argument("--report", type=Path, default=ROOT / "build/verify.json")

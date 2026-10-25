@@ -35,3 +35,10 @@ mechanical and editorial scope.
 No release-gate audit, freeze, admission, external archive, remote, push, tag,
 or public site operation was performed. Those decisions belong to the
 coordinating session. This file is a provenance record, not a release verdict.
+
+## Editing pass, 2026-10-25
+
+The coordinating session made a plain-language pass over the README and the
+paper's reader-facing prose (see VERIFICATION.md). Proofs and claims are
+unchanged; A1 consistency and the proof transcription still need the
+release audits before any candidate freeze.

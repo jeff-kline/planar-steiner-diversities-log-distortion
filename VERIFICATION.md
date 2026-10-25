@@ -163,3 +163,21 @@ printed 2021 date and arXiv 2017 version date remain unexplained. The earlier
 archive's live metadata could not be checked during bibliographic extraction.
 All bibliography entries are supported by inspected saved sources or records;
 these exposure limits are explicitly retained.
+
+## Plain-language editing pass, 2026-10-25 (coordinating session)
+
+The coordinating Claude session rewrote the README and edited the paper's
+abstract, introduction, Section 4 prose, Section 5 and the AI-assistance
+note for plain language. No theorem statement, proof, certificate or table
+value changed. Two claims were corrected: OpenAI's problem #089 is not an
+Erdős problem, and the GNRS tree-distortion statement is now attributed as
+cited in the OpenAI treewidth paper (Section 1, reference [10], Theorem 5.6).
+The README adds a verification-status table.
+
+After the edits: `make paper` passed (two byte-identical clean builds; 7 US
+Letter pages, 227,716 bytes, SHA-256
+`4dad4d9e9b5371007fb20ab034930bb411a3f0edb6b4c04d84c13bf174158b77`).
+Pages 1, 2, 5, 6 and 7 were rendered at 70 dpi and inspected; the title fits
+on one centered line. `gh api markdown` plus `scripts/check_readme.py` passed:
+56 inline and 2 display expressions render as math, 15 local links resolve.
+The earlier hashes above describe the superseded draft.

@@ -11,39 +11,39 @@
 \newtheorem{proposition}[theorem]{Proposition}
 \newcommand{\R}{\mathbb R}
 \newcommand{\cut}{\chi}
-\title{Planar Steiner diversities need logarithmic\texorpdfstring{\\ $\ell_1$}{ L1} distortion}
+\title{Planar Steiner diversities need logarithmic \texorpdfstring{$\ell_1$}{L1} distortion}
 \author{Jeff Kline}
-\date{Pre-release draft --- 2026-10-25}
+\date{Pre-release draft --- October 25, 2026}
 \hypersetup{pdftitle={Planar Steiner diversities need logarithmic L1 distortion},pdfauthor={Jeff Kline}}
 \begin{document}
 \maketitle
-\begin{center}\small Pre-release draft. Not admitted, not peer reviewed.\end{center}
 \begin{abstract}
-The Steiner diversity of a graph assigns to each vertex set the minimum cost
-of a connected subgraph containing it. On unit diamond graphs, this diversity
-requires logarithmic distortion in $\ell_1$, although the graphs are planar
-and have treewidth two. After $d\ge1$ edge-replacement rounds the graph has
-$N_d=(2\cdot4^d+4)/3$ vertices, and we prove the explicit lower bound
-$c_1(D_d)\ge(6d+7+2/4^d)/9$. A cut inequality on the nested generation sets,
-together with their exact Steiner costs, gives a rational dual certificate
-with only $d$ demand sets. Combined with Bryant and Tupper's upper bound for
-metric Steiner diversities, the result has order $\log N_d$. The same
-certificate supplies unit-capacity set demands that satisfy every cut
-condition but require at least this much routing congestion. The exact value
-of $c_1(D_d)$ is not determined for $d\ge3$. Three bounded literature scans
-found no matching result; novelty remains unresolved.
+A diversity assigns a value to every finite set of points, extending a metric
+from pairs to sets. The Steiner diversity of a graph gives each set of
+vertices the length of the shortest connected subgraph that contains it. We
+show that the Steiner diversities of planar graphs cannot be embedded in
+$\ell_1$ with bounded distortion, even though their shortest-path metrics
+can. The examples are the unit diamond graphs $D_d$, which are planar and
+have treewidth two. The graph $D_d$ has $N_d=(2\cdot4^d+4)/3$ vertices, and
+its Steiner diversity needs $\ell_1$ distortion at least $(6d+7+2/4^d)/9$.
+By an upper bound of Bryant and Tupper, the order $\log N_d$ is correct.
+Equivalently, $D_d$ carries demands on vertex sets that pass every cut test
+but need congestion at least this large when routed by Steiner trees. The
+exact distortion is not determined for $d\ge3$. Bounded literature searches
+found no earlier statement of the result, but its novelty is not established.
 \end{abstract}
 
 \section{Introduction}
-The Steiner diversity of a graph assigns to each vertex set the minimum cost
-of a connected subgraph containing it. On unit diamond graphs, this diversity
-requires logarithmic distortion in $\ell_1$, although the graphs are planar
-and have treewidth two. The obstruction concerns one embedding that must
-preserve the connection costs of all terminal sets simultaneously.
+A diversity assigns a value to every finite set of points, extending a metric
+from pairs to sets. The Steiner diversity of a graph gives each set of
+vertices the length of the shortest connected subgraph that contains it. We
+ask how well a single embedding in $\ell_1$ can match these lengths for every
+vertex set at once, and show that on planar graphs no constant factor
+suffices.
 
-A diversity extends a metric from pairs to finite sets. For a finite set $V$,
-it is a function $\delta:2^V\to[0,\infty)$ that vanishes exactly on sets of
-size at most one and satisfies
+Formally, a diversity on a finite set $V$ is a function
+$\delta:2^V\to[0,\infty)$ that vanishes exactly on sets of size at most one
+and satisfies
 \[
 \delta(A\cup B)\le\delta(A\cup C)+\delta(C\cup B)
 \qquad(C\ne\varnothing).
@@ -56,40 +56,39 @@ diversity} is
 \delta_{G,\ell}(A)=\min\left\{\sum_{e\in E(H)}\ell(e):
  H\subseteq G\text{ is connected and }A\subseteq V(H)\right\},
 \]
-with value zero for $|A|\le1$. Every vertex of $G$ is available as a Steiner
-point. Edges are ordinary pairs throughout this paper.
+with value zero for $|A|\le1$. Any vertex of $G$ may serve as a Steiner
+point, and every edge joins two vertices.
 
-For $f:V\to\R^m$, the coordinate-range $\ell_1$ diversity is
+For $f:V\to\R^m$, the $\ell_1$ diversity of $f$ adds up how far each
+coordinate spreads over a set:
 \[
 h_f(A)=\sum_{i=1}^m\left(\max_{v\in A}f_i(v)-\min_{v\in A}f_i(v)\right),
 \]
-again zero on the empty set. Write $c_1(\delta)$ for the infimum of $D\ge1$
-over all finite dimensions and maps satisfying
-$\delta(A)\le h_f(A)\le D\delta(A)$ for every $A\subseteq V$. Rescaling the
-map permits this noncontracting normalization. For unit graph lengths we
-write $c_1(G)$.
+with $h_f(\varnothing)=0$. Write $c_1(\delta)$ for the infimum of $D\ge1$
+over all dimensions $m$ and maps $f$ with
+$\delta(A)\le h_f(A)\le D\delta(A)$ for every $A\subseteq V$; rescaling $f$
+shows that this normalization loses nothing. For unit edge lengths we write $c_1(G)$.
 
-Recent metric results in OpenAI's Erd\H{o}s problem \#089 materials concern
-constant-distortion embeddings for planar graphs and graphs of fixed
-treewidth~\cite{OAIplanar,OAItw}. These are statements about pairs. For the
-series-parallel class containing diamonds, the bound of two is attributed
-to Chakrabarti, Jaffe, Lee and Vincent~\cite{CJLV}, as reported in
-\cite[Section 1.2]{OAIplanar}. We use that attribution only as context;
-we do not claim that diamond metrics embed isometrically. The question here
-is whether a constant can also preserve every Steiner set cost. The answer
-is no, already at treewidth two.
+For pairs of vertices, the question is settled on these graph classes.
+OpenAI's problem \#089 papers prove that shortest-path metrics of planar
+graphs, and of graphs of bounded treewidth, embed in $\ell_1$ with bounded
+distortion~\cite{OAIplanar,OAItw}. For series-parallel graphs, which include
+the diamonds below, the sharp bound 2 is due to Chakrabarti, Jaffe, Lee and
+Vincent~\cite{CJLV}, as surveyed in \cite[Section 1.2]{OAIplanar}. We show
+that once all vertex sets count, no constant bound holds, already for planar
+graphs of treewidth two.
 
-\paragraph{Results and scope.}
-The principal result is the explicit all-depth bound in Theorem~\ref{thm:main}.
-Its proof uses a simultaneous cut inequality on $d$ nested sets, rather than
-pairwise separation. Corollaries~\ref{cor:order} and~\ref{cor:flow} give the
-asymptotic order and a normalized set-demand flow--cut consequence. Secondary
-results identify the exact optimum of the restricted certificate method and
-its dependence on edge lengths. None of these statements determines the
-full optimal distortion at depth three or beyond. The computational table
-checks finite controls; it is not a premise of the proof. Prior work is
-credited in Section~\ref{sec:earlier}. The three recorded searches were
-bounded and source-negative, so novelty remains unresolved.
+\paragraph{Results.}
+Theorem~\ref{thm:main} gives an explicit lower bound for the unit diamond
+graphs at every depth. Its proof is a short certificate: one inequality,
+valid for every cut, on $d$ nested vertex sets. Corollary~\ref{cor:order}
+shows that the bound has the correct order, $\log N_d$, and
+Corollary~\ref{cor:flow} restates it as a gap between flows and cuts for
+demands on vertex sets. Propositions~\ref{prop:length} and~\ref{prop:method}
+show how the bound depends on edge lengths and that the certificate is the
+best of its shape. None of these results determines $c_1(D_d)$ for $d\ge3$.
+The exact values in Section~\ref{sec:finite} are checks, not premises of the
+proof. Section~\ref{sec:earlier} credits earlier work.
 
 \section{The diamond lower bound}
 Let $D_0$ be one edge. To obtain $D_d$ from $D_{d-1}$, replace every edge by
@@ -357,17 +356,16 @@ as Steiner points, and finite-dimensional coordinate-range $\ell_1$ targets.
 It is not a claim about terminal-induced subgraphs, terminal-only Steiner
 trees, or the distortion of pairs alone.
 
-\section{Exact finite controls}
-Table~\ref{tab:cases} records 28 saved rational primal/dual certificates.
-The draft verifier constructs $D_1,D_2$, checks every cut, enumerates exact
-Steiner costs, checks the objective identity for $d=1,\ldots,12$, and checks
-all 28 certificates. No new linear programs are solved. On each saved graph,
-the verifier computes the minimum spanning-tree cost on every induced vertex
-set, then minimizes over supersets of each terminal set. This gives exact
-Steiner costs because any connected subgraph contains a spanning tree.
-It checks both bounds on every terminal set, all dual cut constraints,
-normalization, and equality of primal and dual objectives using rational
-arithmetic. These finite checks do not verify the all-depth theorem.
+\section{Exact values for small graphs}\label{sec:finite}
+Table~\ref{tab:cases} lists exact values of $c_1$ for 28 small graphs. Each
+value comes with a rational embedding and a rational dual certificate that
+attain it. The repository's checker builds $D_1$ and $D_2$, checks
+inequality~\eqref{eq:cut} on every cut, computes their exact Steiner costs,
+and checks the objective formula for $d=1,\ldots,12$. For each of the 28
+graphs it computes every Steiner cost exactly, as the least spanning-tree cost
+over vertex sets containing the terminals, and checks every constraint of
+both certificates in rational arithmetic. These checks do not prove the
+theorem for larger depths.
 
 \begin{table}[tb]
 \centering
@@ -398,56 +396,42 @@ lengths in $1,\ldots,9$. All other edges have unit length.}
 \label{tab:cases}
 \end{table}
 
-All 28 final saved solver records report optimal status, and the exact
-certificate checks remove reliance on floating-point tolerances for these
-values. Three initial full formulations had timed out; the saved successful
-runs used an equivalent reduction to upper constraints on edges and retained
-all lower constraints. The present verifier checks every upper constraint
-as well, so it does not rely on that reduction. The equalities
-$c_1(D_1)=3/2$ and $c_1(D_2)=17/8$ match $L_1,L_2$; they do not justify
-extrapolating equality to larger depths.
+The values were found by linear programming; the rational certificates make
+them exact, independent of solver tolerances. The equalities
+$c_1(D_1)=3/2$ and $c_1(D_2)=17/8$ match $L_1$ and $L_2$, but they do not
+show that $c_1(D_d)=L_d$ for larger $d$.
 
-\section{Earlier work and unresolved priority}\label{sec:earlier}
-Bryant and Tupper supply the diversity framework~\cite{BT12}, the cut
-representation and hypergraph flow--cut connection~\cite{BT14}, and the
-$O(\log n)$ Steiner-diversity upper bound~\cite[Theorem 2]{BTopen}.
-We cite the last result as an external dependency; its random-tree argument
-has not been independently audited here. The arXiv record identifies a 2017
-version, although the saved PDF prints an October 2021 date.
+\section{Earlier work}\label{sec:earlier}
+Bryant and Tupper introduced diversities~\cite{BT12}, developed their cut
+representation and the correspondence between $\ell_1$ distortion and
+flow--cut gaps~\cite{BT14}, and proved the $O(\log n)$ upper bound for
+Steiner diversities~\cite[Theorem 2]{BTopen}. We use the last result only
+for the upper half of Corollary~\ref{cor:order} and have not re-proved it.
 
-Jozefiak and Shepherd~\cite{JS} discuss a general-graph logarithmic lower
-bound inherited from expander metrics. That argument does not establish the
-planar, treewidth-two statement here. Gupta, Newman, Rabinovich and
-Sinclair~\cite{GNRS} prove logarithmic lower bounds for embeddings of
-series-parallel metrics into distributions of dominating trees. This is a
-nearby metric result with a different target. Their publisher abstract was
-checked; the full article was not inspected for this draft. The
-series-parallel $\ell_1$ metric bound attributed to~\cite{CJLV} was read in
-the OpenAI papers' discussion, not in the original conference paper.
+Jozefiak and Shepherd~\cite{JS} note the general lower bound of order
+$\log n$ inherited from expander metrics; it says nothing about planar
+graphs. Gupta, Newman, Rabinovich and Sinclair~\cite{GNRS} show that some
+series-parallel metrics need distortion of order $\log n$ in distributions
+over dominating trees. That is a statement about metrics and a different
+target, but it suggests a reading of Theorem~\ref{thm:main}: for Steiner
+diversities of diamonds, $\ell_1$ does no better than random trees, up to a
+constant factor.
 
-The author's earlier paper~\cite{Kline} concerns hypergraph Steiner
-diversities and an affine covering-versus-hitting construction. Its
-hyperedges may contain more than two vertices. The present witness consists
-entirely of graph edges and uses nested diamond generations.
+The author's earlier paper~\cite{Kline} studies Steiner diversities of
+hypergraphs, whose edges may contain more than two vertices, through an
+affine construction. The present examples are ordinary graphs.
 
-Three saved bounded scans searched diversity terminology, flow--cut
-terminology, and selected citing papers. They found no source containing the
-same planar graph-Steiner lower bound or its generation-set certificate.
-That negative outcome is not a priority certificate. Search coverage,
-access failures, citations inspected only at abstract level, and unresolved
-candidates are recorded in the repository's prior-work audit. Novelty
-remains unresolved, including at the level of the mechanism.
+Bounded searches of diversity and flow--cut terminology, and of papers
+citing~\cite{BT14} and~\cite{JS}, found no earlier statement of
+Theorem~\ref{thm:main} or of its certificate. This does not establish
+priority. The repository records each search and its limits.
 
-\section*{AI assistance and verification status}
-AI systems assisted with the research, adversarial examination, finite
-certificate checks, source extraction, and preparation of this draft. A
-fresh full proof audit and the owner's adjudication are preserved as
-unchanged evidence. An initial examiner's alternative argument was adopted
-before that audit. The records distinguish an unsuccessful attempt to break
-a claim from a subsequent proof review. Neither constitutes peer review or
-formal proof-assistant certification. The author is responsible for the
-mathematical claims and their presentation. This document is a pre-release
-draft, not an admission or publication decision.
+\section*{AI assistance}
+AI systems helped find the result, attack and check the proof, verify the
+finite certificates, extract bibliographic data and draft this paper, under
+the author's direction. A separate AI review checked the full proof. Such
+reviews are not peer review or a formal proof. The author is responsible for
+the claims and their presentation.
 
 \begin{thebibliography}{9}
 \bibitem{BT12} D. Bryant and P. F. Tupper.
@@ -478,7 +462,7 @@ pages 761--770, 2008. Metadata and metric bound checked in \cite{OAIplanar,OAItw
 original paper not inspected.
 \bibitem{GNRS} A. Gupta, I. Newman, Y. Rabinovich and A. Sinclair.
 Cuts, Trees and $\ell_1$-Embeddings of Graphs.
-\emph{Combinatorica} 24(2):233--269, 2004.
+\emph{Combinatorica} 24(2):233--269, 2004. Statement as cited in \cite[Section 1]{OAItw}; full text not inspected.
 \bibitem{Kline} J. Kline.
 Covering versus hitting in diversity embeddings: an affine obstruction and
 matching bounds. Version 0.1.0, September 13, 2026.

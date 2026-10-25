@@ -1,6 +1,6 @@
 # Build and verification
 
-Pre-release draft. Not admitted, not peer reviewed.
+Version 0.1.0, admitted October 25, 2026. Not peer reviewed.
 
 The verifier and builder need only Python 3 and its standard library; no
 solver or package installation is needed. The author runs them in an isolated

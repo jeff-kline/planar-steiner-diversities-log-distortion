@@ -1,7 +1,7 @@
 # Draft work plan
 
 Authority: ../handoffs/2026-10-25-steiner-diversity-prerelease-draft.md.
-Status: Pre-release draft. Not admitted, not peer reviewed.
+Status: historical plan for the pre-release draft; superseded by ADMISSION.md.
 All five SANITY CHECK outcomes matched on 2026-10-25: both skills MATCH;
 150 evidence hashes OK; predecessor HEAD60d135d; destination absent;
 pdfTeX 1.40.22 (TeX Live2021/MacPorts2021.58693_2).

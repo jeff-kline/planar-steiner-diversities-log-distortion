@@ -1,6 +1,15 @@
 # Planar Steiner diversities need logarithmic L1 distortion
 
-Pre-release draft. Not admitted, not peer reviewed.
+[![Version DOI: 10.5281/zenodo.23644875](https://zenodo.org/badge/DOI/10.5281/zenodo.23644875.svg)](https://doi.org/10.5281/zenodo.23644875)
+
+**Status: version 0.1.0 admitted October 25, 2026.** The immutable release is
+[v0.1.0](https://github.com/jeff-kline/planar-steiner-diversities-log-distortion/releases/tag/v0.1.0),
+archived at version DOI [10.5281/zenodo.23644875](https://doi.org/10.5281/zenodo.23644875). The concept DOI
+[10.5281/zenodo.23644874](https://doi.org/10.5281/zenodo.23644874) resolves to the latest version; cite the
+version DOI for reproducibility. Admission under the
+[public research standard](https://jeff-kline.github.io/posts/research-program/index.html)
+is a project release decision, not peer review or a correctness certificate;
+see [ADMISSION.md](ADMISSION.md).
 
 A diversity assigns a value to every finite set of points, extending a
 metric from pairs to sets. The Steiner diversity of a graph gives each set of
@@ -164,7 +173,8 @@ peer review. Jeff Kline is responsible for the claims and their presentation.
 ## Citation and status
 
 Jeff Kline. *Planar Steiner diversities need logarithmic L1 distortion*.
-Pre-release draft, October 2026. See [CITATION.cff](CITATION.cff).
+Version 0.1.0, October 25, 2026. [doi:10.5281/zenodo.23644875](https://doi.org/10.5281/zenodo.23644875).
+See [CITATION.cff](CITATION.cff).
 
 ## License
 

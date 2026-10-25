@@ -56,7 +56,7 @@ local = [url for url in links if not re.match(r"https?://", url)]
 assert all((root / url.split("#")[0]).is_file() for url in local), local
 headings = re.findall(r"^## (.+)$", source, flags=re.M)
 assert headings[0] == "What is new" and "Earlier work" in headings
-assert "Pre-release draft. Not admitted, not peer reviewed." in source
+assert "**Status: version 0.1.0 admitted October 25, 2026.**" in source
 report = {"inline_math": len(inlines), "display_math": len(blocks),
           "matching_expressions": True, "existing_local_links": len(local),
           "readme_sha256": hashlib.sha256(source.encode()).hexdigest(),

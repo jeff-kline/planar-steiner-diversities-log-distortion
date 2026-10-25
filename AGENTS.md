@@ -1,24 +1,21 @@
-# Pre-release draft maintenance
+# Release maintenance
 
-Root owns edits, mathematical wording, claim scope, and draft integration.
-Executors may only work within explicitly assigned file lanes. This job allows
-at most three executor dispatches and no new LP solves or research searches.
+Version 0.1.0 was admitted on October 25, 2026 (version DOI
+10.5281/zenodo.23644875). Read ADMISSION.md, AUDIT_LEDGER.md, BUILD.md and
+audit/PRIOR_WORK.md before edits.
+
+Root owns edits, claim scope, audit dispositions and release decisions.
+Auditors are read-only unless explicitly assigned an editing lane.
 Email is globally prohibited; never use email tools or seek email access.
-No remote, push, tag, release, archive, repository publication, or site change.
-The coordinating session owns all later release decisions.
+No public push, tag, release, archive or site change without exact author
+authorization. The Zenodo portal belongs to the author.
+Never move or rewrite the public tag v0.1.0; corrections follow CORRECTIONS.md
+and receive a new version.
 
-Status: Pre-release draft. Not admitted, not peer reviewed.
-Read PLAN.md, BUILD.md, audit/PRIOR_WORK.md and audit/EVIDENCE.md before edits.
-Use only ~/.venvs/claude/bin/python for named Python scripts;
-assert sys.prefix != sys.base_prefix. Never run a system interpreter or pip.
-No package installs are required. TeX compiler: /opt/local/bin/pdflatex.
-Long jobs require a tracked PID, resource limits and logs; verify PID after kills.
-
-The audited proof is authoritative. Transcribe it faithfully; if a mathematical
-error is suspected, stop and report instead of silently repairing it.
-Source evidence and the predecessor repository are read-only. Copy, never move.
-Preserve copied evidence bytes and their scope qualifications. Never infer
+Preserve the copied evidence in audit/evidence and data/ byte for byte.
+Material mathematical changes reopen the affected audit. Never infer global
 novelty from a bounded search. Do not claim exact optimal diamond distortion
 at depth three or beyond, or a lower bound for every positive-length assignment.
-Keep author and committer identity local to this repository:
+Use an isolated Python environment for maintainer scripts; never install into
+a system interpreter. Commit identity:
 Jeff Kline <2778446+jeff-kline@users.noreply.github.com>.

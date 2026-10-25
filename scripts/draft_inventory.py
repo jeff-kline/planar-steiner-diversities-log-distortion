@@ -56,7 +56,7 @@ def evidence():
         f"{sha}  {name}\n" for name, sha in sorted(copied.items())))
     document = """# Copied evidence and provenance
 
-Pre-release draft. Not admitted, not peer reviewed.
+Version 0.1.0, admitted October 25, 2026. Not peer reviewed.
 
 Source: `~/Documents/hm-ai/quarantine/steiner-diversity-tw-2026-10-25/`.
 The source is a read-only non-Git directory, so there is no source commit.

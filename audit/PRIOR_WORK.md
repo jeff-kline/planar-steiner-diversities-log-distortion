@@ -1,6 +1,6 @@
 # Prior work and search limits
 
-Pre-release draft. Not admitted, not peer reviewed.
+Version 0.1.0, admitted October 25, 2026. Not peer reviewed.
 Novelty: **UNRESOLVED**. Three bounded scans were **SOURCE-NEGATIVE**;
 no matching source was found within their inspected coverage. That outcome
 is not a proof of priority or of absence from the literature.

@@ -1,6 +1,6 @@
 # Audit ledger
 
-Pre-release draft. Not admitted, not peer reviewed.
+Version 0.1.0, admitted October 25, 2026. Not peer reviewed.
 
 ## Research evidence inherited unchanged
 

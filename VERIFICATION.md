@@ -1,6 +1,6 @@
 # Draft verification record
 
-Date: 2026-10-25. Pre-release draft. Not admitted, not peer reviewed.
+Date: 2026-10-25. Version 0.1.0, admitted October 25, 2026. Not peer reviewed.
 
 ## Environment and bounds
 
